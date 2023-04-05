@@ -47,3 +47,11 @@ if __name__ == "__main__":
 
     test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
     print('\nTest Accuracy: ', test_acc)
+
+    probability_model = tf.keras.Sequential([
+        model,
+        tf.keras.layers.Softmax()
+    ])
+    predictions = probability_model.predict(test_images)
+    print('Model is most confident that Image0 is %s, and here is the label %s' %
+          (class_names[np.argmax(predictions[0])], test_labels[0]))
