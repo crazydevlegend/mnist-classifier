@@ -1,3 +1,4 @@
+from locale import atoi
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -52,6 +53,19 @@ if __name__ == "__main__":
         model,
         tf.keras.layers.Softmax()
     ])
+
     predictions = probability_model.predict(test_images)
-    print('Model is most confident that Image0 is %s, and here is the label %s' %
-          (class_names[np.argmax(predictions[0])], test_labels[0]))
+    while True:
+        print("\n*************************************************")
+        indexStr = input("Please input # of the image to test [0-10000): ")
+        index = atoi(indexStr)
+        if index >= 0 and index < 10000:
+            print('You have chosen Image #%s' % (index))
+            img = test_images[index]
+            img = np.expand_dims(img, 0)
+            prediction = probability_model.predict(img)
+            print('Model is most confident that Image0 is %s, and here is the test label %s' %
+                  (class_names[np.argmax(prediction[0])], class_names[test_labels[index]]))
+        else:
+            print('Quiting...')
+            break

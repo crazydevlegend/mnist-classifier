@@ -22,5 +22,30 @@ Epoch 10/10
 313/313 - 0s - loss: 0.5144 - accuracy: 0.8357 - 497ms/epoch - 2ms/step
 Test Accuracy:  0.8356999754905701
 
-313/313 [ == == == == == == == == == == == == == == == ] - 0s 743us/step
-Model is most confident that Image0 is Ankle boot, and here is the label 9
+*************************************************
+Please input # of the image to test [0-10000): 1000
+You have chosen Image #1000
+1/1 [==============================] - 0s 52ms/step
+Model is most confident that Image0 is Shirt, and here is the test label T-shirt/top
+
+*************************************************
+Please input # of the image to test [0-10000): 500
+You have chosen Image #500
+1/1 [==============================] - 0s 15ms/step
+Model is most confident that Image0 is Pullover, and here is the test label Pullover
+
+*************************************************
+Please input # of the image to test [0-10000): 5001
+You have chosen Image #5001
+1/1 [==============================] - 0s 14ms/step
+Model is most confident that Image0 is Dress, and here is the test label Dress
+
+*************************************************
+Please input # of the image to test [0-10000): 9999
+You have chosen Image #9999
+1/1 [==============================] - 0s 16ms/step
+Model is most confident that Image0 is Sandal, and here is the test label Sandal
+
+*************************************************
+Please input # of the image to test [0-10000): 10000
+Quiting...
