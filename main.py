@@ -44,3 +44,6 @@ if __name__ == "__main__":
     manipulate_data(train_images, test_images)
     export_data(train_images, train_labels, class_names)
     model = train_model(train_images, train_labels)
+
+    test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+    print('\nTest Accuracy: ', test_acc)
